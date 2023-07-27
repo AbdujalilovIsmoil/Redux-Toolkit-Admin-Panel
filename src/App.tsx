@@ -7,7 +7,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const App = (): JSX.Element => {
   const Login = lazy(() => import("./pages/Login"));
   const Registration = lazy(() => import("./pages/Registration"));
-
   const routes = createBrowserRouter([
     {
       path: "/",
