@@ -1,9 +1,43 @@
-import {} from "react";
+import Routes from "./routes";
+import { Home, Error } from "./pages";
+import { lazy, Suspense } from "react";
+import { Loader } from "./components/layouts";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const App = (): JSX.Element => {
+  const Login = lazy(() => import("./pages/Login"));
+  const Registration = lazy(() => import("./pages/Registration"));
+
+  const routes = createBrowserRouter([
+    {
+      path: "/",
+      element: <Routes />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+      ],
+    },
+    {
+      path: "*",
+      element: <Error />,
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/registration",
+      element: <Registration />,
+    },
+  ]);
+
   return (
     <>
-      <h1>App</h1>
+      <Suspense fallback={<Loader />}>
+        <RouterProvider router={routes} />
+      </Suspense>
     </>
   );
 };
