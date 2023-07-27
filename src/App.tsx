@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Input } from "./components/fields";
+import { Button, Input } from "./components/fields";
 
 const App = (): JSX.Element => {
   const [value, setValue] = useState<string>("");
@@ -11,6 +11,13 @@ const App = (): JSX.Element => {
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
+      <Button
+        type="link"
+        onClick={() => console.log(value)}
+        disabled={!value && true}
+      >
+        Send
+      </Button>
     </>
   );
 };

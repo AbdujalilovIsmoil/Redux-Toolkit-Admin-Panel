@@ -1,8 +1,8 @@
-import { memo } from "react";
 import { Input } from "antd";
+import { memo, FC } from "react";
 import { inputInterface } from "../../../ts/interfaces";
 
-const index = memo(
+const index: FC<inputInterface> = memo(
   ({
     id,
     type,
@@ -15,7 +15,7 @@ const index = memo(
     placeholder,
     onBlur = () => {},
     onChange = () => {},
-  }: inputInterface): JSX.Element => {
+  }): JSX.Element => {
     return (
       <>
         <Input
