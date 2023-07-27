@@ -1,23 +1,9 @@
-import { useState } from "react";
-import { Button, Input } from "./components/fields";
+import {} from "react";
 
 const App = (): JSX.Element => {
-  const [value, setValue] = useState<string>("");
-
   return (
     <>
-      <Input
-        type="text"
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-      />
-      <Button
-        type="link"
-        onClick={() => console.log(value)}
-        disabled={!value && true}
-      >
-        Send
-      </Button>
+      <h1>App</h1>
     </>
   );
 };

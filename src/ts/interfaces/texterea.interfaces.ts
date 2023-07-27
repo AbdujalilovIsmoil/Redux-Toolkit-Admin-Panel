@@ -1,1 +1,4 @@
-export interface Texterea {}
+export interface textereaInterface {
+  type?: string;
+  children?: string;
+}

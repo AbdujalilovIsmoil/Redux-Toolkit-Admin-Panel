@@ -1,5 +1,5 @@
 import { inputInterface } from "./input.interfaces";
 import { buttonInterface } from "./button.interfaces";
-import { Texterea } from "./texterea.interfaces";
+import { textereaInterface } from "./texterea.interfaces";
 
-export type { inputInterface, buttonInterface, Texterea };
+export type { inputInterface, buttonInterface, textereaInterface };
