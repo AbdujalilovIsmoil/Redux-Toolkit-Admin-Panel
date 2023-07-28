@@ -1,15 +1,5 @@
-import { ChangeEvent } from "react";
+import { InputProps } from "antd";
 
-export interface inputInterface {
-  name?: string;
-  type?: string;
-  disabled?: boolean;
-  maxLength?: number;
-  className?: string;
-  minLength?: number;
-  id?: number | string;
-  placeholder?: string;
-  value?: string | number;
-  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
-  onBlur?: (event: ChangeEvent<HTMLInputElement>) => void;
+export interface inputInterface extends InputProps {
+  children?: React.ReactNode;
 }
