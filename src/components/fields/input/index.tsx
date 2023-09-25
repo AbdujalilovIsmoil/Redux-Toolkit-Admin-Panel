@@ -1,13 +1,12 @@
 import { Input } from "antd";
-import { memo, FC } from "react";
-import { inputInterface } from "../../../ts/interfaces";
+import { inputInterface } from "ts/interfaces";
 
-const index: FC<inputInterface> = memo((props): JSX.Element => {
+const index = (props: inputInterface) => {
   return (
     <>
       <Input {...props} />
     </>
   );
-});
+};
 
 export default index;

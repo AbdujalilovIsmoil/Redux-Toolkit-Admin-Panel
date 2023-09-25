@@ -1,8 +1,7 @@
-import { memo } from "react";
 import { Outlet } from "react-router-dom";
-import { Footer, Header } from "../components/layouts";
+import { Footer, Header } from "components/layouts";
 
-const index = memo((): JSX.Element => {
+const index = () => {
   return (
     <>
       <Header />
@@ -10,6 +9,6 @@ const index = memo((): JSX.Element => {
       <Footer />
     </>
   );
-});
+};
 
 export default index;

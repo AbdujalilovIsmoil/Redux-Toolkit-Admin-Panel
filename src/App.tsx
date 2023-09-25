@@ -1,12 +1,12 @@
-import Routes from "./routes";
-import { Home, Error } from "./pages";
+import Routes from "routes";
+import { Home, Error } from "pages";
 import { lazy, Suspense } from "react";
-import { Loader } from "./components/layouts";
+import { Loader } from "components/layouts";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const App = (): JSX.Element => {
-  const Login = lazy(() => import("./pages/Login"));
-  const Registration = lazy(() => import("./pages/Registration"));
+const App = () => {
+  const Login = lazy(() => import("pages/Login"));
+  const Registration = lazy(() => import("pages/Registration"));
   const routes = createBrowserRouter([
     {
       path: "/",
