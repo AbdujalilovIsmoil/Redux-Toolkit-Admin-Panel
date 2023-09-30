@@ -1,5 +1,3 @@
-import { ButtonProps } from "antd";
-
-export interface buttonInterface extends ButtonProps {
+export interface buttonInterface {
   children?: React.ReactNode;
 }

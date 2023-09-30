@@ -1,5 +1,3 @@
-import { InputProps } from "antd";
-
-export interface inputInterface extends InputProps {
+export interface inputInterface {
   children?: React.ReactNode;
 }
